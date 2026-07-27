@@ -25,9 +25,9 @@ def submit_contact():
         return jsonify({"success": False, "message": str(e)}), 500
 
 def send_email(name, email, message):
-    sender_email = "p229352@pwr.nu.edu.pk"  # Replace with your email
-    sender_password = "Walterblack85"  # Replace with your email password
-    receiver_email = "botanex.net@gmail.com"  # Replace with the destination email
+    sender_email = ""  # Replace with your email
+    sender_password = ""  # Replace with your email password
+    receiver_email = ""  # Replace with the destination email
 
     subject = f"New Contact Message from {name}"
     body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
