@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Custom Theme</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="home.html" class="logo"> BotAnex Forge</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="lets_connect.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Signup Section -->
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="logo-center">
+                <a href="home.html" class="login-logo"><img src="images/logo.jpg" alt="logo" class="logoimg"></a>
+            </div>
+            <div class="login-form">
+                <h2>Create an Account</h2>
+                <p>Join us today! Please fill in the details below to create your account.</p>
+                <form action="welcome.html" method="POST">
+                    <div class="input-group">
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Sign Up</button>
+                </form>
+                <p class="signup-link">
+                    Already have an account? <a href="login.html">Log In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 MyBrand. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

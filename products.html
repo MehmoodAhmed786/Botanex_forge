@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<nav id="siteNav">
+    <div class="logo">
+        <a href="home.html"><img src="images/logo.jpg" alt="BotAnex Forge logo"></a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navLinks">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+            <a href="services.html" class="dropbtn">Services</a>
+            <ul class="dropdown-content">
+                <li><a href="services.html#social-automation">Social Automation</a></li>
+                <li><a href="services.html#automation">Workflow Automation</a></li>
+                <li><a href="services.html#app-development">App Development</a></li>
+                <li><a href="services.html#website">Web Development</a></li>
+                <li><a href="services.html#ai">Artificial Intelligence</a></li>
+                <li><a href="services.html#digital">Digital Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="lets_connect.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+</nav>
+
+<section class="catalog">
+
+    <div class="catalog-grid-overlay" aria-hidden="true"></div>
+
+    <header class="catalog-head">
+        <p class="eyebrow">FIG. 01 — SERVICE CATALOG</p>
+        <h1>Built to spec.<br>Shipped on schedule.</h1>
+        <p class="lede">Eight builds, three disciplines. Pick a system below or filter by what you actually need.</p>
+    </header>
+
+    <div class="filter-bar" id="filterBar" role="tablist" aria-label="Filter by category">
+        <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+        <button class="filter-btn" data-filter="automation-bots" role="tab" aria-selected="false">AUTO — Automation & Bots</button>
+        <button class="filter-btn" data-filter="website-development" role="tab" aria-selected="false">WEB — Websites</button>
+        <button class="filter-btn" data-filter="app-development" role="tab" aria-selected="false">APP — Mobile</button>
+    </div>
+
+    <div class="product-list" id="productList">
+
+        <article class="product-item" data-category="automation-bots">
+            <span class="spec-code">AUTO.01</span>
+            <div class="product-visual">
+                <img src="images/leadforge.jpg" alt="LeadForge AI">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">AI Automation</p>
+                <h3>LeadForge AI</h3>
+                <p>Find, verify, and organize thousands of business leads using AI-powered automation.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="automation-bots">
+            <span class="spec-code">AUTO.02</span>
+            <div class="product-visual">
+                <img src="images/botforge.jpg" alt="BotForge Studio">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Automation</p>
+                <h3>BotForge Studio</h3>
+                <p>Custom Python bots that automate repetitive business tasks and save valuable time.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="automation-bots">
+            <span class="spec-code">AUTO.03</span>
+            <div class="product-visual">
+                <img src="images/chatforge.jpg" alt="ChatForge AI">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">AI Chatbot</p>
+                <h3>ChatForge AI</h3>
+                <p>Deploy intelligent AI assistants trained on your company documents and knowledge.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="website-development">
+            <span class="spec-code">WEB.01</span>
+            <div class="product-visual">
+                <img src="images/web.jpg" alt="Premium Website Development">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Website</p>
+                <h3>Premium Website Development</h3>
+                <p>Modern business websites designed for speed, SEO and customer conversions.</p>
+                <div class="product-meta">
+                    <span class="price">Starting at $299</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="website-development">
+            <span class="spec-code">WEB.02</span>
+            <div class="product-visual">
+                <img src="images/ecommerce.jpg" alt="E-Commerce Store">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">E-Commerce</p>
+                <h3>E-Commerce Store</h3>
+                <p>Professional online stores with secure payments, inventory management and analytics.</p>
+                <div class="product-meta">
+                    <span class="price">Starting at $499</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="website-development">
+            <span class="spec-code">WEB.03</span>
+            <div class="product-visual">
+                <img src="images/dashboard.jpg" alt="Business Dashboard">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Dashboard</p>
+                <h3>Business Dashboard</h3>
+                <p>Manage customers, orders, reports and analytics from one secure platform.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="app-development">
+            <span class="spec-code">APP.01</span>
+            <div class="product-visual">
+                <img src="images/mobileapp.jpg" alt="Android & iOS Apps">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Mobile App</p>
+                <h3>Android & iOS Apps</h3>
+                <p>Beautiful, high-performance mobile applications built specifically for your business.</p>
+                <div class="product-meta">
+                    <span class="price">Starting at $599</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="automation-bots">
+            <span class="spec-code">AUTO.04</span>
+            <div class="product-visual">
+                <img src="images/socialbot.jpg" alt="Social Media Automation">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Social Media</p>
+                <h3>Social Media Automation</h3>
+                <p>Automate posting, scheduling, messaging and engagement across multiple platforms.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-item" data-category="automation-bots">
+            <span class="spec-code">AUTO.05</span>
+            <div class="product-visual">
+                <img src="images/scraper.jpg" alt="Web Scraping Solutions">
+            </div>
+            <div class="product-info">
+                <p class="product-tag">Data</p>
+                <h3>Web Scraping Solutions</h3>
+                <p>Extract clean, structured data from websites quickly and accurately.</p>
+                <div class="product-meta">
+                    <span class="price">Custom Quote</span>
+                    <a href="lets_connect.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="empty-state" id="emptyState" hidden>Nothing filed under this category yet. Try “ALL.”</p>
+
+</section>
+
+<script src="products.js"></script>
+</body>
+</html>
