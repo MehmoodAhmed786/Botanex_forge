@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BotAnex Forge | Software, Automation & Digital Growth</title>
-    <link rel="stylesheet" href="home.css">
-    <script src="reviews.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="reviews.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+
+    <nav id="siteNav">
         <div class="logo">
             <a href="home.html"><img src="images/logo.jpg" alt="BotAnex Forge logo"></a>
         </div>
-        <ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul id="navLinks">
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
@@ -29,7 +37,7 @@
                     <li><a href="services.html#digital">Digital Marketing</a></li>
                 </ul>
             </li>
-            <li><a href="lets_connect.html">Contact Us</a></li>
+            <li><a href="lets_connect.html" class="nav-cta">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -44,7 +52,7 @@
             <div id="particles-container" class="particles-container"></div>
         </div>
         <div class="hero-content">
-            <p class="eyebrow">Software • Automation • Growth</p>
+            <p class="eyebrow">Software · Automation · Growth</p>
             <h1>We turn ambitious ideas into polished digital products.</h1>
             <p>BotAnex Forge delivers custom websites, automation bots, mobile apps, and AI-powered solutions that help modern businesses operate smarter.</p>
             <button class="connect-btn" onclick="window.location.href='lets_connect.html'">Let's Connect</button>
@@ -62,6 +70,7 @@
 
     <section class="expertise-section" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">Capabilities</p>
             <h2>Our Expertise</h2>
             <div class="expertise-grid">
                 <div class="expertise-item">
@@ -94,6 +103,7 @@
 
     <section id="portfolio" class="portfolio-section" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">Selected Work</p>
             <h2>Featured Solutions</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -117,6 +127,7 @@
 
     <section class="unfair-advantage-section" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">Why BotAnex Forge</p>
             <h2>Why teams choose BotAnex Forge</h2>
             <div class="advantage-items">
                 <div class="advantage-item">
@@ -149,6 +160,7 @@
 
     <section id="team" class="team-section" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">The Crew</p>
             <h2>Meet Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
@@ -177,8 +189,9 @@
 
     <section class="trust-reviews-section" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">Client Record</p>
             <h2>Client Trust & Reviews</h2>
-            <p>We have served over 100 clients globally, delivering dependable solutions with long-term value.</p>
+            <p class="section-sub">We have served over 100 clients globally, delivering dependable solutions with long-term value.</p>
             <div class="reviews-slider">
                 <button class="slider-arrow left-arrow">❮</button>
                 <div class="reviews-container">
@@ -219,6 +232,7 @@
 
     <section class="lets-talk" data-aos="fade-up">
         <div class="container">
+            <p class="section-eyebrow">Getting Started</p>
             <div class="header">Let's talk</div>
             <div class="content">
                 <div class="image">
@@ -226,24 +240,24 @@
                 </div>
             <div class="details">
                 <div class="step">
-                    <div class="icon">📞</div>
+                    <div class="icon">01</div>
                     <div class="text">
                         <h4>Hop on a discovery call</h4>
-                        <p>Let's start by understanding your business. In our initial conversation, we’ll explore your team setup, project goals, timeline, budget, and required expertise to see how we can align.</p>
+                        <p>Let's start by understanding your business. In our initial conversation, we'll explore your team setup, project goals, timeline, budget, and required expertise to see how we can align.</p>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="icon">🛠️</div>
+                    <div class="icon">02</div>
                     <div class="text">
                         <h4>Identify the right solution together</h4>
-                        <p>We’ll shape the project plan, figure out the best way to collaborate, and select the perfect team to get things moving.</p>
+                        <p>We'll shape the project plan, figure out the best way to collaborate, and select the perfect team to get things moving.</p>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="icon">🚀</div>
+                    <div class="icon">03</div>
                     <div class="text">
                         <h4>Get started and accelerate fast</h4>
-                        <p>Once we’ve got the plan in place, we’ll dive in. You’ll get regular updates, and we’ll keep things flexible, adjusting as we go to tailor to your needs.</p>
+                        <p>Once we've got the plan in place, we'll dive in. You'll get regular updates, and we'll keep things flexible, adjusting as we go to tailor to your needs.</p>
                     </div>
                 </div>
                 <div class="cta-button">
@@ -253,6 +267,7 @@
         </div>
     </div>
 </section>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         if (typeof AOS !== 'undefined') {
@@ -347,7 +362,8 @@
         });
     });
 </script>
-</body>
+<script src="nav.js"></script>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
@@ -381,4 +397,5 @@
         </div>
     </div>
 </footer>
+</body>
 </html>

@@ -1,0 +1,208 @@
+/* =============================================
+   SHARED NAV — link after theme.css on every page
+   ============================================= */
+/* =============================================
+   NAV
+   ============================================= */
+#siteNav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:16px 6vw;
+    background:var(--surface);
+    border-bottom:1px solid transparent;
+    transition:.25s ease;
+    font-family:var(--font-mono);
+}
+
+#siteNav.nav-scrolled{
+    border-bottom-color:var(--line);
+    box-shadow:0 8px 24px rgba(4,14,26,.06);
+}
+
+#siteNav .logo img{
+    height:34px;
+    display:block;
+}
+
+#siteNav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin:0;
+    padding:0;
+}
+
+#siteNav > ul > li{
+    position:relative;
+}
+
+#siteNav > ul > li > a{
+    display:block;
+    padding:10px 14px;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--text);
+    text-decoration:none;
+    position:relative;
+    transition:.2s ease;
+}
+
+#siteNav > ul > li > a::after{
+    content:"";
+    position:absolute;
+    left:14px;
+    right:14px;
+    bottom:6px;
+    height:2px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.25s ease;
+}
+
+#siteNav > ul > li > a:hover,
+#siteNav > ul > li > a:focus-visible{
+    color:var(--accent-deep);
+}
+
+#siteNav > ul > li > a:hover::after,
+#siteNav > ul > li > a:focus-visible::after{
+    transform:scaleX(1);
+}
+
+.nav-cta{
+    background:var(--accent);
+    color:var(--on-accent) !important;
+    padding:10px 16px !important;
+}
+
+.nav-cta::after{ display:none; }
+
+.nav-cta:hover{ background:var(--accent-deep); color:var(--on-accent) !important; }
+
+/* dropdown */
+.dropdown-content{
+    position:absolute;
+    top:calc(100% + 10px);
+    left:0;
+    min-width:220px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    box-shadow:0 20px 40px rgba(4,14,26,.12);
+    padding:6px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(6px);
+    transition:.2s ease;
+}
+
+.dropdown-content li{ list-style:none; }
+
+.dropdown-content a{
+    display:block;
+    padding:10px 12px;
+    font-size:11px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--muted);
+    text-decoration:none;
+    transition:.15s ease;
+}
+
+.dropdown-content a:hover{
+    background:var(--accent-soft);
+    color:var(--accent-deep);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.dropdown.dropdown-open .dropdown-content{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* hamburger */
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;
+    height:34px;
+    background:transparent;
+    border:1px solid var(--line);
+    cursor:pointer;
+    padding:0;
+}
+
+.nav-toggle span{
+    display:block;
+    height:2px;
+    margin:0 7px;
+    background:var(--text);
+    transition:.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+@media(max-width:900px){
+    .nav-toggle{ display:flex; }
+
+    #siteNav ul#navLinks{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        background:var(--surface);
+        border-bottom:1px solid var(--line);
+        max-height:0;
+        overflow:hidden;
+        transition:.3s ease;
+    }
+
+    #siteNav ul#navLinks.nav-open{
+        max-height:600px;
+    }
+
+    #siteNav > ul > li > a{ padding:16px 6vw; }
+    #siteNav > ul > li > a::after{ display:none; }
+    .nav-cta{ margin:8px 6vw; text-align:center; }
+
+    .dropdown-content{
+        position:static;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        border:none;
+        box-shadow:none;
+        max-height:0;
+        overflow:hidden;
+        padding:0;
+        transition:.25s ease;
+    }
+
+    .dropdown.dropdown-open .dropdown-content{
+        max-height:400px;
+        padding:0 0 8px;
+    }
+
+    .dropdown-content a{ padding:10px 6vw 10px calc(6vw + 14px); }
+}

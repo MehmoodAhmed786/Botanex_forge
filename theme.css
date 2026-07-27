@@ -1,0 +1,38 @@
+/* =============================================
+   SHARED THEME — link this on every page, before
+   nav.css and the page-specific stylesheet.
+   ============================================= */
+:root{
+    --accent:        #D56559;
+    --accent-deep:   #A94134;
+    --dark:          #010203;
+    --surface:       #FFFFFF;
+    --surface-soft:  #F5F7FB;
+    --surface-hi:    #EDF0F7;
+    --text:          #14213D;
+    --muted:         #5D6475;
+
+    --line:          rgba(20,33,61,.14);
+    --line-soft:     rgba(20,33,61,.06);
+    --on-accent:     #FFFFFF;
+    --accent-soft:   rgba(213,101,89,.10);
+
+    --font-display:  'Space Grotesk', sans-serif;
+    --font-mono:     'IBM Plex Mono', monospace;
+    --font-body:     'Inter', sans-serif;
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--text);
+    background:var(--surface);
+}
+
+a{ color:inherit; }
+
+img{ max-width:100%; display:block; }
