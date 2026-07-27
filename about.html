@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About BotAnex Forge | Software, Automation & Digital Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
+
+    <nav id="siteNav">
+        <div class="logo">
+            <a href="home.html"><img src="images/logo.jpg" alt="BotAnex Forge logo"></a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul id="navLinks">
             <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="lets_connect.html">Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="services.html" class="dropbtn">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="services.html#social-automation">Social Automation</a></li>
+                    <li><a href="services.html#automation">Workflow Automation</a></li>
+                    <li><a href="services.html#app-development">App Development</a></li>
+                    <li><a href="services.html#website">Web Development</a></li>
+                    <li><a href="services.html#ai">Artificial Intelligence</a></li>
+                    <li><a href="services.html#digital">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="lets_connect.html" class="nav-cta">Contact Us</a></li>
         </ul>
     </nav>
-    <div class="logo-center">
-        <a href="home.html" class="login-logo"><img src="images/logo.jpg" alt="BotAnex Forge logo" class="logoimg"></a>
-    </div>
 
     <header class="about-hero">
+        <div class="about-hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
             <p class="eyebrow">ABOUT BOTANEX FORGE</p>
             <h1>We build reliable software, automation, and digital experiences for modern businesses.</h1>
@@ -52,53 +70,60 @@
     </section>
 
     <section class="about-section">
-        <div class="container about-grid">
-            <div class="card wide-card">
-                <h2>Our mission</h2>
-                <p>We exist to help businesses simplify operations, improve visibility, and grow with dependable technology. Every solution we build is tailored to real processes, real users, and real business goals.</p>
-            </div>
-            <div class="card">
-                <h2>What we build</h2>
-                <ul>
-                    <li>Custom business websites and landing pages</li>
-                    <li>Mobile apps for service delivery and engagement</li>
-                    <li>Social media, web, and workflow automation bots</li>
-                    <li>AI-powered tools for content, support, and analysis</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>Our approach</h2>
-                <p>We combine clear strategy, rapid development, and thoughtful design so clients get polished results without unnecessary complexity.</p>
+        <div class="container">
+            <p class="section-eyebrow">The Basics</p>
+            <div class="about-grid">
+                <div class="card wide-card">
+                    <span class="spec-code">MISSION</span>
+                    <h2>Our mission</h2>
+                    <p>We exist to help businesses simplify operations, improve visibility, and grow with dependable technology. Every solution we build is tailored to real processes, real users, and real business goals.</p>
+                </div>
+                <div class="card">
+                    <span class="spec-code">SCOPE</span>
+                    <h2>What we build</h2>
+                    <ul>
+                        <li>Custom business websites and landing pages</li>
+                        <li>Mobile apps for service delivery and engagement</li>
+                        <li>Social media, web, and workflow automation bots</li>
+                        <li>AI-powered tools for content, support, and analysis</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="spec-code">METHOD</span>
+                    <h2>Our approach</h2>
+                    <p>We combine clear strategy, rapid development, and thoughtful design so clients get polished results without unnecessary complexity.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="team-section">
         <div class="container">
+            <p class="section-eyebrow">The Crew</p>
             <h2>Meet the team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="images/Mehmood.JPG" alt="Mehmood Ahmed">
                     <h3>Mehmood Ahmed</h3>
-                    <p>Founder & CEO</p>
+                    <p class="role">Founder & CEO</p>
                     <p>Leads product direction, client strategy, and long-term growth.</p>
                 </div>
                 <div class="team-member">
                     <img src="images/ali_mustafa.jpeg" alt="Ali Mustafa">
                     <h3>Ali Mustafa</h3>
-                    <p>Frontend Developer</p>
+                    <p class="role">Frontend Developer</p>
                     <p>Builds modern, responsive interfaces with a focus on usability and performance.</p>
                 </div>
                 <div class="team-member">
                     <img src="images/abdullah.jpeg" alt="Abdullah">
                     <h3>Abdullah</h3>
-                    <p>Automation Specialist</p>
+                    <p class="role">Automation Specialist</p>
                     <p>Designs intelligent bots and workflow automations that save time and reduce manual effort.</p>
                 </div>
                 <div class="team-member">
                     <img src="images/ahmed_ali_hashmi.JPG" alt="Ahmed Ali Hashmi">
                     <h3>Ahmed Ali Hashmi</h3>
-                    <p>App Developer</p>
+                    <p class="role">App Developer</p>
                     <p>Creates mobile-first applications that connect customers, teams, and services seamlessly.</p>
                 </div>
             </div>
@@ -106,23 +131,28 @@
     </section>
 
     <section class="values-section">
-        <div class="container values-grid">
-            <div>
-                <h2>Why clients choose us</h2>
-                <p>We are known for transparent communication, practical delivery, and dependable support from first conversation to final launch.</p>
-            </div>
-            <div>
-                <ul>
-                    <li><strong>Focused execution:</strong> we prioritize the work that matters most.</li>
-                    <li><strong>Clear collaboration:</strong> clients stay informed at every stage.</li>
-                    <li><strong>Scalable thinking:</strong> solutions are built to grow as your business grows.</li>
-                </ul>
+        <div class="container">
+            <p class="section-eyebrow">Why Us</p>
+            <div class="values-grid">
+                <div>
+                    <h2>Why clients choose us</h2>
+                    <p>We are known for transparent communication, practical delivery, and dependable support from first conversation to final launch.</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>Focused execution:</strong> we prioritize the work that matters most.</li>
+                        <li><strong>Clear collaboration:</strong> clients stay informed at every stage.</li>
+                        <li><strong>Scalable thinking:</strong> solutions are built to grow as your business grows.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2025 BotAnex Forge. All rights reserved.</p>
     </footer>
+
+<script src="nav.js"></script>
 </body>
 </html>
