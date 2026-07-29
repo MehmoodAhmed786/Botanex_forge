@@ -1,26 +1,42 @@
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
+const form = document.getElementById('contactForm');
+const statusMessage = document.getElementById('formStatus');
+const submitButton = form?.querySelector('button[type="submit"]');
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+if (form && statusMessage && submitButton) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    try {
-        const response = await fetch('http://localhost:5000/submit-contact', {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json'  // Ensure this header is set
-            },
-            body: JSON.stringify({ name, email, message }),  // Send data as JSON
-        });
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
 
-        const result = await response.json();
-        if (result.success) {
-            alert('Message sent successfully!');
-        } else {
-            alert(`Error: ${result.message}`);
+        statusMessage.textContent = 'Sending your message...';
+        statusMessage.className = 'form-status is-loading';
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+
+            if (response.ok && (result.success || result.message?.toLowerCase().includes('success'))) {
+                form.reset();
+                statusMessage.textContent = 'Thanks! Your message has been sent successfully.';
+                statusMessage.className = 'form-status success';
+            } else {
+                throw new Error(result.message || 'Unable to send the message right now.');
+            }
+        } catch (err) {
+            statusMessage.textContent = `Sorry, we could not send your message. ${err.message}`;
+            statusMessage.className = 'form-status error';
+        } finally {
+            submitButton.disabled = false;
         }
-    } catch (err) {
-        alert(`Error: ${err.message}`);
-    }
-});
+    });
+}

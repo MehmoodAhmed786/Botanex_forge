@@ -184,6 +184,30 @@ body, html {
     cursor: pointer;
 }
 
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.form-status {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-height: 1.3em;
+}
+
+.form-status.success {
+    color: #147d3b;
+}
+
+.form-status.error {
+    color: #b42318;
+}
+
+.form-status.is-loading {
+    color: var(--accent-deep);
+}
+
 .footer {
     background: var(--dark);
     color: #fff;
