@@ -1,0 +1,138 @@
+/* =============================================
+   BLOG LISTING GRID STYLES (blog/index.html)
+   ============================================= */
+
+/* Hero Banner */
+.blog-hero {
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.blog-hero-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.blog-hero h1 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 16px 0;
+  color: var(--text);
+}
+
+.blog-hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Card Grid Layout */
+.blog-grid-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Individual Card */
+.blog-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(20, 33, 61, 0.08);
+}
+
+.card-image-link img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.card-category {
+  color: var(--accent-deep);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card-meta time {
+  color: var(--muted);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.card-title a:hover {
+  color: var(--accent);
+}
+
+.card-excerpt {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.read-more {
+  text-decoration: none;
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+.read-time {
+  color: var(--muted);
+}

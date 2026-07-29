@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Title</title>
+
+  <!-- Google Fonts required by theme variables -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- 1. Shared Global Theme Stylesheet -->
+  <link rel="stylesheet" href="../theme.css">
+  
+  <!-- 2. Dedicated Blog Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Blog Navigation / Header -->
+  <header class="blog-header">
+    <div class="blog-nav-container">
+      <a href="../index.html" class="back-link">&larr; Back to Main Website</a>
+      <a href="index.html" class="blog-home">Blog Home</a>
+    </div>
+  </header>
+
+  <!-- Main Article Container -->
+  <main class="blog-wrapper">
+    <article class="blog-post">
+      
+      <!-- Article Header Meta -->
+      <header class="post-header">
+        <span class="category">Tutorials</span>
+        <h1 class="post-title">Your Blog Article Title Here</h1>
+        <div class="post-meta">
+          <span class="author">By Author Name</span> &bull;
+          <time datetime="2026-07-29">July 29, 2026</time> &bull;
+          <span class="read-time">5 min read</span>
+        </div>
+      </header>
+
+      <!-- Featured Image (Optional) -->
+      <figure class="featured-image">
+        <img src="https://via.placeholder.com/800x400" alt="Cover image description">
+        <figcaption>Caption describing the featured image above.</figcaption>
+      </figure>
+
+      <!-- Article Content Body -->
+      <div class="post-content">
+        <p class="lead">
+          This is an introductory lead paragraph. It sets the tone for the article and catches the reader's attention.
+        </p>
+
+        <p>
+          Write your main body paragraphs here. Everything inside <code>.post-content</code> will be styled specifically by your blog CSS without impacting the rest of your website.
+        </p>
+
+        <h2>Subheading Title (H2)</h2>
+        <p>
+          More content explaining your topic. You can add lists, quotes, images, or code blocks directly in standard HTML format.
+        </p>
+
+        <ul>
+          <li>Key takeaway point number one</li>
+          <li>Key takeaway point number two</li>
+          <li>Key takeaway point number three</li>
+        </ul>
+
+        <blockquote>
+          "This is a blockquote for emphasizing key insights or quoting external sources."
+        </blockquote>
+
+        <h3>Smaller Section Heading (H3)</h3>
+        <p>
+          Additional details or step-by-step instructions.
+        </p>
+      </div>
+
+      <!-- Article Footer / Tags -->
+      <footer class="post-footer">
+        <div class="tags">
+          <span>Tags:</span>
+          <a href="#">HTML</a>
+          <a href="#">CSS</a>
+          <a href="#">Web Dev</a>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- Blog Page Footer -->
+  <footer class="blog-site-footer">
+    <p>&copy; 2026 My Website Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
