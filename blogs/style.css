@@ -194,3 +194,43 @@
   border-top: 1px solid var(--line-soft);
   background: var(--surface-soft);
 }
+/* =============================================
+   BUTTON STYLES (.btn)
+   ============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--on-accent);
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(20, 33, 61, 0.08);
+}
+
+/* Hover & Active States */
+.btn:hover {
+  background-color: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: var(--on-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(169, 65, 52, 0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus State for Accessibility */
+.btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
